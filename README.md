@@ -3,12 +3,12 @@ Damerau–Levenshtein distance is a string metric for measuring the edit distanc
 
 The restricted distance function is defined recursively as:
 ```
-                    _
-                   |  0                            if i=j=0
-                   |  da,b(i−1,j)+1                if i>0
-        da,b(i,j) <   da,b(i,j−1)+1                if j>0
-                   |  da,b(i−1,j−1)+1 (ai ≠ bj)    if i,j>0
-                   |_ da,b( i − 2 , j − 2 ) + 1    if i,j>1 and a[i] = b[j-i] and a[i-1] = b[j]
+                 _
+                |  0                         if i=j=0
+                |  da,b(i−1,j)+1             if i>0
+     da,b(i,j) <   da,b(i,j−1)+1             if j>0
+                |  da,b(i−1,j−1)+1(ai≠bj)    if i,j>0
+                |_ da,b(i−2,j−2)+1           if i,j>1 and a[i]=b[j-i] and a[i-1]=b[j]
 ```          
 
 where 1(ai≠bj) is the indicator function equal to 0 when ai=bj and equal to 1 otherwise. 
