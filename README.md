@@ -12,10 +12,10 @@ The restricted distance function is defined recursively as:
 ```          
 
 where 1(ai≠bj) is the indicator function equal to 0 when ai=bj and equal to 1 otherwise. 
-
-           da,b(i−1,j)+1  corresponds to a deletion (from a to b).
-           da,b(i,j−1)+1  corresponds to an insertion (from a to b).
-           da,b(i−1,j−1)+1 (ai ≠ bj)  corresponds to a match or mismatch, depending on whether the respective symbols are the same.
-           da,b( i − 2 , j − 2 ) + 1  corresponds to a transposition between two successive symbols.
-
+```
+  da,b(i−1,j)+1  corresponds to a deletion (from a to b).
+  da,b(i,j−1)+1  corresponds to an insertion (from a to b).
+  da,b(i−1,j−1)+1 (ai ≠ bj)  corresponds to a match or mismatch, depending on whether the respective symbols are the same.            
+  da,b( i − 2 , j − 2 ) + 1  corresponds to a transposition between two successive symbols.
+```
 The Damerau–Levenshtein distance between a and b is then given by the function value for full strings: da,b(|a|,|b|) where i=|a| denotes the length of string a and j=|b| is the length of b. 
